@@ -1,0 +1,32 @@
+ALGORITHM phrase
+VAR
+    sentence : STRING
+    letter, voy : CHAR;
+    Nb, i, j : INTEGER;
+BEGIN
+    write "Enter a sentence : "
+    read sentence 
+    Nb := 0
+    voy := "aeiouy"
+    i := 0
+    i ← 0
+    letter := sentence[i] - 1
+    i := Length(sentence) - 1
+    letter := sentence[i]
+
+    FOR i ← 1 à Length(sentence) DO
+        if Mid(sentence, i , 1) = " " Alors
+            Nb ← Nb + 1
+        end_if
+    i next
+    write "this sentence contains ", Nb + 1, " words"
+    END_FOR
+
+    FOR i ← 1 à Length(sentence) DO
+        if Mid(sentence, i, 1) = "a" or Mid(sentence, i, 1) = "e" or Mid(sentence, i, 1) = "i" or Mid(sentence, i, 1) = "o" or Mid(sentence, i, 1) = "u" or Mid(sentence, i, 1) = "y" THEN
+            Nb ← Nb + 1
+        FinSi
+    i next
+    write "this sentence contains ", Nb, " vowel(s)"
+
+END
